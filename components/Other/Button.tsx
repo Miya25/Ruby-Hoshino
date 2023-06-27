@@ -47,7 +47,7 @@ export default function Button({
             "--bg-color": colorOpacity(color, 10, 500),
             "--bg-color-hover": colorOpacity(color, 20, 500),
             "--text-color": colorOpacity(color, 100, 500),
-          }}
+          } as React.CSSProperties} // Type assertion to CSSProperties
           className={`bg-button px-8 py-3 rounded-md transition-all duration-200 font-medium disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none ${className}`}
           {...props}
         >
@@ -59,7 +59,7 @@ export default function Button({
           style={{
             "--bg-color": colorOpacity(color, 100, 500),
             "--bg-color-hover": colorOpacity(color, 70, 800),
-          }}
+          } as React.CSSProperties} // Type assertion to CSSProperties
           className={`bg-button px-8 py-3 rounded-md transition-all duration-200 font-medium !text-white disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none ${className}`}
           {...props}
         >
@@ -72,7 +72,7 @@ export default function Button({
             "--bg-color": colorOpacity(color, 100, 500),
             "--bg-color-hover": colorOpacity(color, 0, 800),
             "--border-color": colorOpacity(color, 100, 500),
-          }}
+          } as React.CSSProperties} // Type assertion to CSSProperties
           className={`bg-button border-2 border-white/0 px-8 py-3 rounded-md transition-all duration-200 font-medium !text-white disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none ${className}`}
           {...props}
         >
@@ -86,7 +86,7 @@ export default function Button({
             "--bg-color": colorOpacity(color, 10, 500),
             "--bg-color-hover": colorOpacity(color, 20, 500),
             "--text-color": colorOpacity(color, 100, 500),
-          }}
+          } as React.CSSProperties} // Type assertion to CSSProperties
           className={`bg-button w-12 h-12 flex items-center justify-center rounded-md transition-all duration-200 font-medium disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none ${className}`}
           {...props}
         >
