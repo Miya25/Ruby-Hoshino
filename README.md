@@ -8,9 +8,6 @@
 
 This Repo name is based upon the charecter Ruby-Hoshino from the Manga/Anime series "Oshi no Ko" (Please dont sue me hehe)
 
-# Credits
-Some stuff in the repo is from twitterbio by Nulopeso credits to them
-
 # Coded In NextJs & TypeScript  
 
 
