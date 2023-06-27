@@ -4,9 +4,11 @@
 </h2>
 <p>
 
-# Repo Name
+# About Repo:
 
 This Repo name is based upon the charecter Ruby-Hoshino from the Manga/Anime series "Oshi no Ko" (Please dont sue me hehe)
+
+This Repo is inspired upon Nutlope/twitterbio :)
 
 # Coded In NextJs & TypeScript  
 
