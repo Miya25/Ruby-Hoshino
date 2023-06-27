@@ -7,7 +7,7 @@ import { createParser, ParsedEvent, ReconnectInterval } from "eventsource-parser
 
 import DropDown, { VibeType } from "../components/Other/DropDown";
 import Footer from "../components/Static/Footer";
-import Github from "../components/Other/GitHub";
+import Github from "./components/Other/GitHub";
 import Header from "../components/Static/Header";
 import LoadingDots from "../components/Other/loadingstuff";
 
