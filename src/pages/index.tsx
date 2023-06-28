@@ -15,10 +15,12 @@ interface BioApiResponse {
   text: string;
 }
 
+type ExtendedVibeType = VibeType | "Funny"; // Update the VibeType type
+
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional"); // Updated type
+  const [vibe, setVibe] = useState<ExtendedVibeType>("Professional"); // Updated type
   const [generatedBios, setGeneratedBios] = useState<string>("");
 
   const bioRef = useRef<HTMLDivElement | null>(null);
@@ -29,7 +31,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} twitter biographies with no hashtags and clearly labeled "1." and "2.". ${
+  const prompt = `Generate 2 ${vibe} DscInflux with no hashtags and clearly labeled "1." and "2.". ${
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : ""
@@ -100,7 +102,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20" style={{ backgroundColor: "#541dc1" }}>
         <a
           className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
           href="https://github.com/TopicBotList/Ruby-Hoshino"
@@ -116,7 +118,7 @@ const Home: NextPage = () => {
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
-              src="/1-black.png"
+              src="https://cdn.topiclist.xyz/images/png/1-black.png"
               width={30}
               height={30}
               alt="1 icon"
@@ -140,7 +142,7 @@ const Home: NextPage = () => {
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
+            <Image src="https://cdn.topiclist.xyz/images/png/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="text-left font-medium">Select your vibe.</p>
           </div>
           <div className="block">
@@ -177,26 +179,25 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bio:
+                  Generated Bios
                 </h2>
-              </div>
-              <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                {generatedBios
-                  .substring(generatedBios.indexOf("1") + 3)
-                  .split("2.")
-                  .map((generatedBio, index) => (
-                    <div
-                      className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
-                      onClick={() => {
-                        navigator.clipboard.writeText(generatedBio);
-                        toast("Bio copied to clipboard!!");
-                      }}
+                <div className="mt-6 space-y-6">
+                  {generatedBios.split("\n").map((bio, index) => (
+                    <p
+                      className="sm:text-xl text-lg font-medium text-slate-800"
                       key={index}
                     >
-                      <p>{generatedBio}</p>
-                    </div>
+                      {index + 1}. {bio}
+                    </p>
                   ))}
+                </div>
               </div>
+              <button
+                className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+                onClick={generateBio}
+              >
+                Generate more bios &rarr;
+              </button>
             </>
           )}
         </div>

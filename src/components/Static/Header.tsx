@@ -18,7 +18,7 @@ export default function Header() {
       </Link>
         <Image
           alt="Vercel Icon"
-          src="https://static.wikia.nocookie.net/logopedia/images/a/a7/Vercel_favicon.svg/revision/latest/scale-to-width-down/150?cb=20221026155821"
+          src="https://cdn.topiclist.xyz/images/png/Vercel.png"
           className="sm:w-8 sm:h-[27px] w-8 h-[28px]"
           width={32}
           height={28}
