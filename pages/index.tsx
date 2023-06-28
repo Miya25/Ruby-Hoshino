@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { createParser, ParsedEvent, ReconnectInterval } from "eventsource-parser";
 
-import DropDown, { VibeType } from "../components/Other/DropDown";
-import Footer from "../components/Static/Footer";
-import Github from "./components/Other/GitHub";
-import Header from "../components/Static/Header";
-import LoadingDots from "../components/Other/loadingstuff";
+import DropDown, { VibeType } from "../../components/Other/DropDown";
+import Footer from "../../components/Static/Footer";
+import Github from "../../components/Other/GitHub";
+import Header from "../../components/Static/Header";
+import LoadingDots from "../../components/Other/loadingstuff";
 
 interface BioApiResponse {
   text: string;
