@@ -2,7 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 
-export type VibeType = "Professional" | "Casual";
+export type VibeType = "Professional" | "Casual" | "Funny";
 
 interface DropDownProps {
   vibe: VibeType;
