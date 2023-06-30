@@ -35,7 +35,7 @@ const Home: NextPage = () => {
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : ""
-  } Make sure each generated biography is less than 160 characters, has short sentences that are found in Twitter bios, and base them on this context: ${bio}${
+  } Make sure each generated biography is less than 160 characters, has short sentences that are found mainly in Twitter bios, InstaGram,Discord and base them on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
