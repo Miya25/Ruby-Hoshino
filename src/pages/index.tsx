@@ -10,11 +10,6 @@ import Footer from "../../components/Static/Footer";
 import Github from "../../components/Other/Github";
 import Header from "../../components/Static/Header";
 import LoadingDots from "../../components/Other/LoadingStuff";
-import {
-  createParser,
-  ParsedEvent,
-  ReconnectInterval,
-} from "eventsource-parser";
 
 interface BioApiResponse {
   text: string;
